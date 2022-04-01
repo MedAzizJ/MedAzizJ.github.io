@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Inscription</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript">
+		function valider()
+		{
+			
+			var x=document.getElementById('n').value;
+			if ((x[0]>"Z")||(x[0]<"A"))
+			{
+				alert("le nom doivent commencer par une majuscule");return false;
+			}
+			if (x=="")
+			{
+				alert("Entrer l'indentifier");return false;
+			}
+			for (i=0;i<x.length;i++)
+			{
+				if((x[i].toUpperCase()>"Z")||(x[i].toUpperCase()<"A"))
+				{
+					alert("Le nom ne doivent contenir queles lettres alphabétique");return false;
+				}
+			}
+
+		}
+		
+	</script>
+</head>
+<body>
+	<form action="indexcalc.html">
+	<div>
+		<img src="astronaut1.png">
+		<p class="text">Indentifier</p>
+		<p><input type="text"  id="n" placeholder="Indentifier"></p>
+		<p class="text">Password</p>
+		<p><input type="Password" id="n" placeholder="Password" 
+			 maxlength="8" required></p>
+		<p class="text">Email</p>
+		<p><input type="email" name="email" placeholder="Email" pattern=".+@gmail\.com"  required>
+		</p>
+		<p><input type="submit" name="r1" value="S'inscrie" id="button" onclick="valider()" ></p>
+		champs obligatoires*
+
+	</div>
+	</form>
+</body>
+</html>
